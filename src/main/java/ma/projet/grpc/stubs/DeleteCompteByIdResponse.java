@@ -8,25 +8,25 @@ package ma.projet.grpc.stubs;
  * Réponse contenant le compte demandé
  * </pre>
  *
- * Protobuf type {@code GetCompteByIdResponse}
+ * Protobuf type {@code DeleteCompteByIdResponse}
  */
-public  final class GetCompteByIdResponse extends
+public  final class DeleteCompteByIdResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:GetCompteByIdResponse)
-    GetCompteByIdResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:DeleteCompteByIdResponse)
+    DeleteCompteByIdResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use GetCompteByIdResponse.newBuilder() to construct.
-  private GetCompteByIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DeleteCompteByIdResponse.newBuilder() to construct.
+  private DeleteCompteByIdResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private GetCompteByIdResponse() {
+  private DeleteCompteByIdResponse() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new GetCompteByIdResponse();
+    return new DeleteCompteByIdResponse();
   }
 
   @java.lang.Override
@@ -34,7 +34,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private GetCompteByIdResponse(
+  private DeleteCompteByIdResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -53,14 +53,14 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
-            ma.projet.grpc.stubs.Compte.Builder subBuilder = null;
-            if (compte_ != null) {
-              subBuilder = compte_.toBuilder();
+            ma.projet.grpc.stubs.DeleteCompteResult.Builder subBuilder = null;
+            if (deleted_ != null) {
+              subBuilder = deleted_.toBuilder();
             }
-            compte_ = input.readMessage(ma.projet.grpc.stubs.Compte.parser(), extensionRegistry);
+            deleted_ = input.readMessage(ma.projet.grpc.stubs.DeleteCompteResult.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(compte_);
-              compte_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(deleted_);
+              deleted_ = subBuilder.buildPartial();
             }
 
             break;
@@ -86,38 +86,38 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ma.projet.grpc.stubs.CompteOuterClass.internal_static_GetCompteByIdResponse_descriptor;
+    return ma.projet.grpc.stubs.CompteOuterClass.internal_static_DeleteCompteByIdResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ma.projet.grpc.stubs.CompteOuterClass.internal_static_GetCompteByIdResponse_fieldAccessorTable
+    return ma.projet.grpc.stubs.CompteOuterClass.internal_static_DeleteCompteByIdResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ma.projet.grpc.stubs.GetCompteByIdResponse.class, ma.projet.grpc.stubs.GetCompteByIdResponse.Builder.class);
+            ma.projet.grpc.stubs.DeleteCompteByIdResponse.class, ma.projet.grpc.stubs.DeleteCompteByIdResponse.Builder.class);
   }
 
-  public static final int COMPTE_FIELD_NUMBER = 1;
-  private ma.projet.grpc.stubs.Compte compte_;
+  public static final int DELETED_FIELD_NUMBER = 1;
+  private ma.projet.grpc.stubs.DeleteCompteResult deleted_;
   /**
-   * <code>.Compte compte = 1;</code>
-   * @return Whether the compte field is set.
+   * <code>.DeleteCompteResult deleted = 1;</code>
+   * @return Whether the deleted field is set.
    */
-  public boolean hasCompte() {
-    return compte_ != null;
+  public boolean hasDeleted() {
+    return deleted_ != null;
   }
   /**
-   * <code>.Compte compte = 1;</code>
-   * @return The compte.
+   * <code>.DeleteCompteResult deleted = 1;</code>
+   * @return The deleted.
    */
-  public ma.projet.grpc.stubs.Compte getCompte() {
-    return compte_ == null ? ma.projet.grpc.stubs.Compte.getDefaultInstance() : compte_;
+  public ma.projet.grpc.stubs.DeleteCompteResult getDeleted() {
+    return deleted_ == null ? ma.projet.grpc.stubs.DeleteCompteResult.getDefaultInstance() : deleted_;
   }
   /**
-   * <code>.Compte compte = 1;</code>
+   * <code>.DeleteCompteResult deleted = 1;</code>
    */
-  public ma.projet.grpc.stubs.CompteOrBuilder getCompteOrBuilder() {
-    return getCompte();
+  public ma.projet.grpc.stubs.DeleteCompteResultOrBuilder getDeletedOrBuilder() {
+    return getDeleted();
   }
 
   private byte memoizedIsInitialized = -1;
@@ -134,8 +134,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (compte_ != null) {
-      output.writeMessage(1, getCompte());
+    if (deleted_ != null) {
+      output.writeMessage(1, getDeleted());
     }
     unknownFields.writeTo(output);
   }
@@ -146,9 +146,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (compte_ != null) {
+    if (deleted_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getCompte());
+        .computeMessageSize(1, getDeleted());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -160,15 +160,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ma.projet.grpc.stubs.GetCompteByIdResponse)) {
+    if (!(obj instanceof ma.projet.grpc.stubs.DeleteCompteByIdResponse)) {
       return super.equals(obj);
     }
-    ma.projet.grpc.stubs.GetCompteByIdResponse other = (ma.projet.grpc.stubs.GetCompteByIdResponse) obj;
+    ma.projet.grpc.stubs.DeleteCompteByIdResponse other = (ma.projet.grpc.stubs.DeleteCompteByIdResponse) obj;
 
-    if (hasCompte() != other.hasCompte()) return false;
-    if (hasCompte()) {
-      if (!getCompte()
-          .equals(other.getCompte())) return false;
+    if (hasDeleted() != other.hasDeleted()) return false;
+    if (hasDeleted()) {
+      if (!getDeleted()
+          .equals(other.getDeleted())) return false;
     }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
@@ -181,78 +181,78 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasCompte()) {
-      hash = (37 * hash) + COMPTE_FIELD_NUMBER;
-      hash = (53 * hash) + getCompte().hashCode();
+    if (hasDeleted()) {
+      hash = (37 * hash) + DELETED_FIELD_NUMBER;
+      hash = (53 * hash) + getDeleted().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(byte[] data)
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(java.io.InputStream input)
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseDelimitedFrom(java.io.InputStream input)
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseDelimitedFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse parseFrom(
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ma.projet.grpc.stubs.GetCompteByIdResponse prototype) {
+  public static Builder newBuilder(ma.projet.grpc.stubs.DeleteCompteByIdResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -285,26 +285,26 @@ private static final long serialVersionUID = 0L;
    * Réponse contenant le compte demandé
    * </pre>
    *
-   * Protobuf type {@code GetCompteByIdResponse}
+   * Protobuf type {@code DeleteCompteByIdResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:GetCompteByIdResponse)
-      ma.projet.grpc.stubs.GetCompteByIdResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:DeleteCompteByIdResponse)
+      ma.projet.grpc.stubs.DeleteCompteByIdResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ma.projet.grpc.stubs.CompteOuterClass.internal_static_GetCompteByIdResponse_descriptor;
+      return ma.projet.grpc.stubs.CompteOuterClass.internal_static_DeleteCompteByIdResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ma.projet.grpc.stubs.CompteOuterClass.internal_static_GetCompteByIdResponse_fieldAccessorTable
+      return ma.projet.grpc.stubs.CompteOuterClass.internal_static_DeleteCompteByIdResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ma.projet.grpc.stubs.GetCompteByIdResponse.class, ma.projet.grpc.stubs.GetCompteByIdResponse.Builder.class);
+              ma.projet.grpc.stubs.DeleteCompteByIdResponse.class, ma.projet.grpc.stubs.DeleteCompteByIdResponse.Builder.class);
     }
 
-    // Construct using ma.projet.grpc.stubs.GetCompteByIdResponse.newBuilder()
+    // Construct using ma.projet.grpc.stubs.DeleteCompteByIdResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -322,11 +322,11 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (compteBuilder_ == null) {
-        compte_ = null;
+      if (deletedBuilder_ == null) {
+        deleted_ = null;
       } else {
-        compte_ = null;
-        compteBuilder_ = null;
+        deleted_ = null;
+        deletedBuilder_ = null;
       }
       return this;
     }
@@ -334,17 +334,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ma.projet.grpc.stubs.CompteOuterClass.internal_static_GetCompteByIdResponse_descriptor;
+      return ma.projet.grpc.stubs.CompteOuterClass.internal_static_DeleteCompteByIdResponse_descriptor;
     }
 
     @java.lang.Override
-    public ma.projet.grpc.stubs.GetCompteByIdResponse getDefaultInstanceForType() {
-      return ma.projet.grpc.stubs.GetCompteByIdResponse.getDefaultInstance();
+    public ma.projet.grpc.stubs.DeleteCompteByIdResponse getDefaultInstanceForType() {
+      return ma.projet.grpc.stubs.DeleteCompteByIdResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ma.projet.grpc.stubs.GetCompteByIdResponse build() {
-      ma.projet.grpc.stubs.GetCompteByIdResponse result = buildPartial();
+    public ma.projet.grpc.stubs.DeleteCompteByIdResponse build() {
+      ma.projet.grpc.stubs.DeleteCompteByIdResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -352,12 +352,12 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ma.projet.grpc.stubs.GetCompteByIdResponse buildPartial() {
-      ma.projet.grpc.stubs.GetCompteByIdResponse result = new ma.projet.grpc.stubs.GetCompteByIdResponse(this);
-      if (compteBuilder_ == null) {
-        result.compte_ = compte_;
+    public ma.projet.grpc.stubs.DeleteCompteByIdResponse buildPartial() {
+      ma.projet.grpc.stubs.DeleteCompteByIdResponse result = new ma.projet.grpc.stubs.DeleteCompteByIdResponse(this);
+      if (deletedBuilder_ == null) {
+        result.deleted_ = deleted_;
       } else {
-        result.compte_ = compteBuilder_.build();
+        result.deleted_ = deletedBuilder_.build();
       }
       onBuilt();
       return result;
@@ -397,18 +397,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ma.projet.grpc.stubs.GetCompteByIdResponse) {
-        return mergeFrom((ma.projet.grpc.stubs.GetCompteByIdResponse)other);
+      if (other instanceof ma.projet.grpc.stubs.DeleteCompteByIdResponse) {
+        return mergeFrom((ma.projet.grpc.stubs.DeleteCompteByIdResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ma.projet.grpc.stubs.GetCompteByIdResponse other) {
-      if (other == ma.projet.grpc.stubs.GetCompteByIdResponse.getDefaultInstance()) return this;
-      if (other.hasCompte()) {
-        mergeCompte(other.getCompte());
+    public Builder mergeFrom(ma.projet.grpc.stubs.DeleteCompteByIdResponse other) {
+      if (other == ma.projet.grpc.stubs.DeleteCompteByIdResponse.getDefaultInstance()) return this;
+      if (other.hasDeleted()) {
+        mergeDeleted(other.getDeleted());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -425,11 +425,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      ma.projet.grpc.stubs.GetCompteByIdResponse parsedMessage = null;
+      ma.projet.grpc.stubs.DeleteCompteByIdResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (ma.projet.grpc.stubs.GetCompteByIdResponse) e.getUnfinishedMessage();
+        parsedMessage = (ma.projet.grpc.stubs.DeleteCompteByIdResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -439,123 +439,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private ma.projet.grpc.stubs.Compte compte_;
+    private ma.projet.grpc.stubs.DeleteCompteResult deleted_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        ma.projet.grpc.stubs.Compte, ma.projet.grpc.stubs.Compte.Builder, ma.projet.grpc.stubs.CompteOrBuilder> compteBuilder_;
+        ma.projet.grpc.stubs.DeleteCompteResult, ma.projet.grpc.stubs.DeleteCompteResult.Builder, ma.projet.grpc.stubs.DeleteCompteResultOrBuilder> deletedBuilder_;
     /**
-     * <code>.Compte compte = 1;</code>
-     * @return Whether the compte field is set.
+     * <code>.DeleteCompteResult deleted = 1;</code>
+     * @return Whether the deleted field is set.
      */
-    public boolean hasCompte() {
-      return compteBuilder_ != null || compte_ != null;
+    public boolean hasDeleted() {
+      return deletedBuilder_ != null || deleted_ != null;
     }
     /**
-     * <code>.Compte compte = 1;</code>
-     * @return The compte.
+     * <code>.DeleteCompteResult deleted = 1;</code>
+     * @return The deleted.
      */
-    public ma.projet.grpc.stubs.Compte getCompte() {
-      if (compteBuilder_ == null) {
-        return compte_ == null ? ma.projet.grpc.stubs.Compte.getDefaultInstance() : compte_;
+    public ma.projet.grpc.stubs.DeleteCompteResult getDeleted() {
+      if (deletedBuilder_ == null) {
+        return deleted_ == null ? ma.projet.grpc.stubs.DeleteCompteResult.getDefaultInstance() : deleted_;
       } else {
-        return compteBuilder_.getMessage();
+        return deletedBuilder_.getMessage();
       }
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
-    public Builder setCompte(ma.projet.grpc.stubs.Compte value) {
-      if (compteBuilder_ == null) {
+    public Builder setDeleted(ma.projet.grpc.stubs.DeleteCompteResult value) {
+      if (deletedBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        compte_ = value;
+        deleted_ = value;
         onChanged();
       } else {
-        compteBuilder_.setMessage(value);
+        deletedBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
-    public Builder setCompte(
-        ma.projet.grpc.stubs.Compte.Builder builderForValue) {
-      if (compteBuilder_ == null) {
-        compte_ = builderForValue.build();
+    public Builder setDeleted(
+        ma.projet.grpc.stubs.DeleteCompteResult.Builder builderForValue) {
+      if (deletedBuilder_ == null) {
+        deleted_ = builderForValue.build();
         onChanged();
       } else {
-        compteBuilder_.setMessage(builderForValue.build());
+        deletedBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
-    public Builder mergeCompte(ma.projet.grpc.stubs.Compte value) {
-      if (compteBuilder_ == null) {
-        if (compte_ != null) {
-          compte_ =
-            ma.projet.grpc.stubs.Compte.newBuilder(compte_).mergeFrom(value).buildPartial();
+    public Builder mergeDeleted(ma.projet.grpc.stubs.DeleteCompteResult value) {
+      if (deletedBuilder_ == null) {
+        if (deleted_ != null) {
+          deleted_ =
+            ma.projet.grpc.stubs.DeleteCompteResult.newBuilder(deleted_).mergeFrom(value).buildPartial();
         } else {
-          compte_ = value;
+          deleted_ = value;
         }
         onChanged();
       } else {
-        compteBuilder_.mergeFrom(value);
+        deletedBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
-    public Builder clearCompte() {
-      if (compteBuilder_ == null) {
-        compte_ = null;
+    public Builder clearDeleted() {
+      if (deletedBuilder_ == null) {
+        deleted_ = null;
         onChanged();
       } else {
-        compte_ = null;
-        compteBuilder_ = null;
+        deleted_ = null;
+        deletedBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
-    public ma.projet.grpc.stubs.Compte.Builder getCompteBuilder() {
+    public ma.projet.grpc.stubs.DeleteCompteResult.Builder getDeletedBuilder() {
       
       onChanged();
-      return getCompteFieldBuilder().getBuilder();
+      return getDeletedFieldBuilder().getBuilder();
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
-    public ma.projet.grpc.stubs.CompteOrBuilder getCompteOrBuilder() {
-      if (compteBuilder_ != null) {
-        return compteBuilder_.getMessageOrBuilder();
+    public ma.projet.grpc.stubs.DeleteCompteResultOrBuilder getDeletedOrBuilder() {
+      if (deletedBuilder_ != null) {
+        return deletedBuilder_.getMessageOrBuilder();
       } else {
-        return compte_ == null ?
-            ma.projet.grpc.stubs.Compte.getDefaultInstance() : compte_;
+        return deleted_ == null ?
+            ma.projet.grpc.stubs.DeleteCompteResult.getDefaultInstance() : deleted_;
       }
     }
     /**
-     * <code>.Compte compte = 1;</code>
+     * <code>.DeleteCompteResult deleted = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        ma.projet.grpc.stubs.Compte, ma.projet.grpc.stubs.Compte.Builder, ma.projet.grpc.stubs.CompteOrBuilder> 
-        getCompteFieldBuilder() {
-      if (compteBuilder_ == null) {
-        compteBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            ma.projet.grpc.stubs.Compte, ma.projet.grpc.stubs.Compte.Builder, ma.projet.grpc.stubs.CompteOrBuilder>(
-                getCompte(),
+        ma.projet.grpc.stubs.DeleteCompteResult, ma.projet.grpc.stubs.DeleteCompteResult.Builder, ma.projet.grpc.stubs.DeleteCompteResultOrBuilder> 
+        getDeletedFieldBuilder() {
+      if (deletedBuilder_ == null) {
+        deletedBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ma.projet.grpc.stubs.DeleteCompteResult, ma.projet.grpc.stubs.DeleteCompteResult.Builder, ma.projet.grpc.stubs.DeleteCompteResultOrBuilder>(
+                getDeleted(),
                 getParentForChildren(),
                 isClean());
-        compte_ = null;
+        deleted_ = null;
       }
-      return compteBuilder_;
+      return deletedBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -570,41 +570,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:GetCompteByIdResponse)
+    // @@protoc_insertion_point(builder_scope:DeleteCompteByIdResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:GetCompteByIdResponse)
-  private static final ma.projet.grpc.stubs.GetCompteByIdResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:DeleteCompteByIdResponse)
+  private static final ma.projet.grpc.stubs.DeleteCompteByIdResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ma.projet.grpc.stubs.GetCompteByIdResponse();
+    DEFAULT_INSTANCE = new ma.projet.grpc.stubs.DeleteCompteByIdResponse();
   }
 
-  public static ma.projet.grpc.stubs.GetCompteByIdResponse getDefaultInstance() {
+  public static ma.projet.grpc.stubs.DeleteCompteByIdResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<GetCompteByIdResponse>
-      PARSER = new com.google.protobuf.AbstractParser<GetCompteByIdResponse>() {
+  private static final com.google.protobuf.Parser<DeleteCompteByIdResponse>
+      PARSER = new com.google.protobuf.AbstractParser<DeleteCompteByIdResponse>() {
     @java.lang.Override
-    public GetCompteByIdResponse parsePartialFrom(
+    public DeleteCompteByIdResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GetCompteByIdResponse(input, extensionRegistry);
+      return new DeleteCompteByIdResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<GetCompteByIdResponse> parser() {
+  public static com.google.protobuf.Parser<DeleteCompteByIdResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<GetCompteByIdResponse> getParserForType() {
+  public com.google.protobuf.Parser<DeleteCompteByIdResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ma.projet.grpc.stubs.GetCompteByIdResponse getDefaultInstanceForType() {
+  public ma.projet.grpc.stubs.DeleteCompteByIdResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
